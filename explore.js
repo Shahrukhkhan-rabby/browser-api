@@ -4,6 +4,6 @@ const student = {
     makeMovie: function (name) {
         console.log(name)
     }
-};
+}
 student.makeMovie('Din Raat');
 // document.getElementById('name');
