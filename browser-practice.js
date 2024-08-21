@@ -17,15 +17,14 @@ document.getElementById("addButton").addEventListener('click', () => {
 
 // 3. do you want to see the href if ok console log href
 
-document.getElementById("checkHrefButton").addEventListener("click"),
-    () => {
+document.getElementById("checkHrefButton").addEventListener("click", () => {
         if (confirm("Do You want to see the href of the link?")) {
             let href = document.getElementById("myLink").href;
             console.log("Href", href);
         } else {
             console.log("User chose not to see the href.");
         }
-    };
+    });
 
 // 4. purpose of cookies 5-7 lines in english
 // 5. 3 differences between local storage and session storage
