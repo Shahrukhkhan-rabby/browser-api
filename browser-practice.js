@@ -79,6 +79,27 @@ function displayProducts() {
 displayProducts();
 
 // 10. Display products on the website if exists storage display from there.
+
+function displayProducts() {
+    const productList = document.getElementById('product-List');
+    const storedProducts = localStorage.getItem('products');
+
+    if (storedProducts) {
+        const products = JSON.parse(storedProducts);
+        products.forEach(product => {
+            const productItem = document.createElement('div');
+            productItem.innerHTML = `<h2>${product.name}</h2><p>Price: $${product.price}</p>`;
+            productList.appendChild(productItem);
+        });
+
+    }
+    else {
+        productList.innerHTML = '<p>No product available.</p>';
+    }
+}
+displayProducts();
+
+
 // --------------------
 //         MUST
 // --------------------
